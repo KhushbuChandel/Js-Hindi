@@ -46,6 +46,16 @@ function loginUserMessage(username = "Sam"){
     return`${username} just logged in`
 }
 
-console.log(loginUserMessage("Khushbu"))
+//console.log(loginUserMessage("Khushbu"))
 //console.log(loginUserMessage(""))
 //console.log(loginUserMessage())
+
+
+
+// another way to pass parameters like in shopping cart  where we don't know about how many arguments we will get we use spread operator in that case we write the function as
+
+function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200, 400, 500)
+)
