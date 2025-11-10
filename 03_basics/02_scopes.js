@@ -48,8 +48,8 @@ function addone(num){
 }
 
 
-adddTwo(5)
+//adddTwo(5)
 const adddTwo = function(num){
     return num +2
 }
-
+adddTwo(5)
