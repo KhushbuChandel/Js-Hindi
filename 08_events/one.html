@@ -43,9 +43,65 @@
 //     alert("owl clicked again")
 // })
 
-document.getElementById('owl').addEventListener('click', function(e){
-  console.log(e);
+// document.getElementById('owl').addEventListener('click', function(e){
+//   console.log(e);
+// }, false)
+
+// document.getElementById('images').addEventListener('click', function(e){
+//   console.log("clicked inside the ul");
+// }, false)
+
+
+
+// document.getElementById('owl').addEventListener('click', function(e){
+//   console.log("owl clicked");
+// }, false)
+
+// it will stop event bubbling and print only owl clicked.
+// document.getElementById('owl').addEventListener('click', function(e){
+//   console.log("owl clicked");
+//   e.stopPropagation()
+// }, false)
+
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log("google clicked");
+    
+// }, false)
+
+document.querySelector('#images').addEventListener('click',function(e){
+   // console.log(e.target.parentNode);
+
+console.log(e.target.tagName);
+if(e.target.tagName === 'IMG'){
+    console.log(e.target.id);
+      let removeIt = e.target.parentNode
+    removeIt.remove()
+
+}
+
+
+    // let removeIt = e.target.parentNode
+    // removeIt.remove()
+    //removeIt.parentNode.removeChild(removeIt)
 }, false)
+
+
+// this will print owl clicked first then next it will print clicked inside the ul ----- example of event capturing.
+// document.getElementById('images').addEventListener('click', function(e){
+//   console.log("clicked inside the ul");
+// }, true)
+
+
+
+// document.getElementById('owl').addEventListener('click', function(e){
+//   console.log("owl clicked");
+// }, true)
+
+
+
 
 //type, timestamp, defaultPrevented
 //target, toElement, srcElement, currentTarget,
