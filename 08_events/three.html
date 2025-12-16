@@ -8,24 +8,25 @@
     
 </head>
 <body>
-    <h1>Chai aur code</h1>
-    <button id = stop>Stop</button>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">start</button>
+    <button id = "stop">Stop</button>
     <script>
-        const sayKhushbu = function(){
-            console.log("Khushbu");
+           let intervalId;
+        const sayDate = function(){
+         console.log("Khushbu", Date.now());
         }
-        const changeText = function(){
-            document.querySelector('h1').innerHTML = "best JS series"
-        }
-       const changeMe = setTimeout(changeText, 2000)
+    //    const intervalId = setInterval(sayDate, 1000, "hi")
 
-       document.querySelector('#stop').addEventListener('click', function(){
-       clearTimeout(changeMe)
-       console.log("STOPPED")
-       })
-        
-        
+       document.querySelector("#start").addEventListener("click", function(){
+        intervalId = setInterval(sayDate, 1000);
+       });
 
+       document.querySelector("#stop").addEventListener("click", function(){
+        clearInterval(intervalId);
+       });
+
+        //clearInterval(intervalId)
     </script>
 </body>
 </html>
