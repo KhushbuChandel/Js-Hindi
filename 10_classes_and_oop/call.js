@@ -1,12 +1,12 @@
 function SetUsername(username){
-    // cpmlex DB calls
+    // copmlex DB calls
     this.username = username
     console.log("called");
 }
 
 function createUser(username, email, password){
 
-    SetUsername.call(thisusername)
+    SetUsername.call(this,username)
 
     this.email = email
     this.password = password
