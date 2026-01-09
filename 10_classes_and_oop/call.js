@@ -1,5 +1,5 @@
 function SetUsername(username){
-    // copmlex DB calls
+    // complex DB calls
     this.username = username
     console.log("called");
 }
